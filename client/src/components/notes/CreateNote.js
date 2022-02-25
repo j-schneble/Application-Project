@@ -38,10 +38,10 @@ export default function CreateNote() {
     }
 
     return (
-        <div className="create-note">
-            <h2>Create Note</h2>
+        <div className="create-note-2">
+            
             <form onSubmit={createNote} autoComplete="off">
-                <div className="row">
+                <div className="title">
                     <label htmlFor="title">Title</label>
                     <input type="text" value={note.title} id="title"
                     name="title" required onChange={onChangeInput} />
@@ -52,14 +52,14 @@ export default function CreateNote() {
                     <textarea type="text" value={note.content} id="content"
                     name="content" required rows="10" onChange={onChangeInput} />
                 </div>
-
-                <label htmlFor="date">Date: {note.date} </label>
+                
                 <div className="row">
+                <label htmlFor="date">Date: {note.date} </label>
                     <input type="date" id="date"
                     name="date" onChange={onChangeInput} />
                 </div>
 
-                <button type="submit">Save</button>
+                <button class="savenote" type="submit">Save</button>
             </form>
         </div>
     )

@@ -52,7 +52,7 @@ export default function Login({setIsLogin}) {
     return (
         <section className="login-page">
           <div className="login create-note">
-               <h2>Login</h2>
+               <h2 class="loghead">Welcome</h2>
                <form onSubmit={loginSubmit}>
                    <input type="email" name="email" id="login-email"
                    placeholder="Email" required value={user.email}
@@ -65,10 +65,10 @@ export default function Login({setIsLogin}) {
                    onChange={onChangeInput} />
                    
    
-                   <button type="submit">Login</button>
-                   <p>Don't have an account?
-                       <span onClick={() => setOnLogin(true)}> Create One</span>
-                    </p>
+                   <button class="loginbutton" type="submit">LOGIN</button>
+                        <div> </div>
+                       <span  class="textbottom" onClick={() => setOnLogin(true)}> Create account</span>
+                    
                     <h3>{err}</h3>
                </form>
             </div>  
@@ -89,10 +89,10 @@ export default function Login({setIsLogin}) {
                    autoComplete="true" onChange={onChangeInput} />
                    
    
-                   <button type="submit">Register</button>
-                   <p>Have an account?
-                       <span onClick={() => setOnLogin(false)}> Login Now</span>
-                    </p>
+                   <button class="registerbutton" type="submit">Register</button>
+                   
+                       <span class="textbottom2" onClick={() => setOnLogin(false)}> Login Now</span>
+                    
                     <h3>{err}</h3>
                </form>
             </div>
